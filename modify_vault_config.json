@@ -1,0 +1,106 @@
+{
+  "files": [
+     {
+	  "description": "This makes X-mark rooms never have traps",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\gen\\1.0\\template_pools\\vault\\rooms\\challenge\\x-mark.json",
+      "relative_path": "config/the_vault/gen/1.0/template_pools/vault/rooms/challenge/x-mark.json",
+      "modifications": [
+        {
+          "path": [0, "weight"],
+          "value": 0
+        }
+      ]
+    },
+    {
+	  "description": "Make chaos crystals not shit",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\vault_modifier_pools.json",
+      "relative_path": "config/the_vault/vault_modifier_pools.json",
+      "modifications":  [
+        {
+          "path": ["pools", "the_vault:chaos", 0, "entries", 0, "min"],
+          "value": 40
+        },
+        {
+          "path": ["pools", "the_vault:chaos", 0, "entries", 0, "max"],
+          "value": 60
+        },
+        {
+          "path": ["pools", "the_vault:chaos", 0, "entries", 0, "pool"],
+          "match": {"value": "the_vault:wild"},
+          "key_to_modify": "weight",
+          "value": 2
+        },
+        {
+          "path": ["pools", "the_vault:chaos", 0, "entries", 0, "pool"],
+          "match": {"value": "the_vault:furious_mobs"},
+          "key_to_modify": "weight",
+          "value": 6
+        }
+      ]
+    },
+    {
+	  "description": "Remove fading and mana leak modifiers from God altar punishment table",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\vault_modifier_pools.json",
+      "relative_path": "config/the_vault/vault_modifier_pools.json",
+      "modifications":  [
+        {
+          "path": ["pools", "the_vault:altar_curses", 0, "entries", 0, "pool"],
+          "match": {"value": "the_vault:fading"},
+          "key_to_modify": "weight",
+          "value": 0
+        },
+        {
+          "path": ["pools", "the_vault:altar_curses", 0, "entries", 0, "pool"],
+          "match": {"value": "the_vault:mana_leak"},
+          "key_to_modify": "weight",
+          "value": 0
+        }
+      ]
+    },
+    {
+	  "description": "Make SMALL dungeons always have the good shit",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\gen\\1.0\\palettes\\dungeon_rooms\\dungeon_discoverable_small.json",
+      "relative_path": "config/the_vault/gen/1.0/palettes/dungeon_rooms/dungeon_discoverable_small.json",
+      "modifications":  [
+        {
+          "path": ["tile_processors", 0, "levels", 0, "probability"],
+          "value": 1.0
+        },
+       {
+          "path": ["tile_processors", 0, "levels", 1, "probability"],
+          "value": 1.0
+        }
+      ]
+    },
+    {
+	  "description": "Make MEDIUM dungeons always have the good shit",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\gen\\1.0\\palettes\\dungeon_rooms\\dungeon_discoverable_medium.json",
+      "relative_path": "config/the_vault/gen/1.0/palettes/dungeon_rooms/dungeon_discoverable_medium.json",
+      "modifications":  [
+        {
+          "path": ["tile_processors", 0, "levels", 0, "probability"],
+          "value": 1.0
+        },
+       {
+          "path": ["tile_processors", 0, "levels", 1, "probability"],
+          "value": 1.0
+        }
+      ]
+    },
+    {
+	  "description": "Make LARGE dungeons always have the good shit",
+      "full_path": "F:\\VH-3.15.1.4\\config\\the_vault\\gen\\1.0\\palettes\\dungeon_rooms\\dungeon_discoverable_large.json",
+      "relative_path": "config/the_vault/gen/1.0/palettes/dungeon_rooms/dungeon_discoverable_large.json",
+      "modifications":  [
+        {
+          "path": ["tile_processors", 0, "levels", 0, "probability"],
+          "value": 1.0
+        },
+       {
+          "path": ["tile_processors", 0, "levels", 1, "probability"],
+          "value": 1.0
+        }
+      ]
+    }
+  ]
+}
